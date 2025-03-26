@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+        
+        .profile-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            max-width: 400px;
+        }
+        
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #f5f5f5;
+        }
+        
+        form {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        input[type="text"], input[type="number"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .message {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .info {
+            background-color: #d9edf7;
+            border: 1px solid #bce8f1;
+            color: #31708f;
+        }
+        
+        .success {
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+        }
+        
+        .error {
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+        }
+        
+        .files-list, ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .files-list li, ul li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        #stock-chart-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .edit-room-btn, .edit-stock-btn {
+            background-color: #337ab7;
+        }
+        
+        .delete-room-btn, .delete-stock-btn {
+            background-color: #d9534f;
+        }
+        
+        .edit-room-btn:hover, .edit-stock-btn:hover {
+            background-color: #286090;
+        }
+        
+        .delete-room-btn:hover, .delete-stock-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+</head>
+<body>
+    <h1>Async</h1>
+    <h2>Exercise 1</h2>
+    <div id="profile-container"></div>
+    <div id="users-table-container"></div>
+    <div id="user-orders-container"></div>
+    <h2>Exercise 2</h2>
+    <div id="file-upload-container"></div>
+    <div id="files-list-container"></div>
+    <h2>Exercise 3</h2>
+    <div id="messages-container"></div>
+    <div id="room-form-container"></div>
+    <h3>Chambres Disponibles</h3>
+    <div id="rooms-list-container"></div>
+    <h2>Exercise 4</h2>
+    <div id="stock-messages-container"></div>
+    <div id="stock-form-container"></div>
+    <div id="stock-chart-container"></div>
+    <h3>Stock</h3>
+    <div id="stocks-table-container"></div>
+    <script src="main.js"></script>
+</body>
+</html>
